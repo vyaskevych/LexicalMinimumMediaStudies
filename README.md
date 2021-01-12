@@ -1,1 +1,1 @@
-# -LexicalMinimumMediaStudies
+# LexicalMinimumMediaStudies
