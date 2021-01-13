@@ -42,10 +42,28 @@ a img:focus {
 }
 .search{
   display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
   flex-direction: row;
-  border: 1px solid rgb(209, 205, 205);
+  border: 1px solid #cd0066;
   padding: .5em .8em .6em;
   border-radius: 8em;
+  margin: 15px;
+  height: 50px;
+}
+a i:hover {
+  background: #fbe9f2;
+  color: #cc0066;
+ border-radius: 50%;
+  box-shadow: 0 10px 20px rgb(239, 179, 208);
+}
+.search:focus
+{
+  background: #fbe9f2;
+  color: #cc0066;
+  border: 1px solid #cc0066;
+  box-shadow: 0 10px 20px rgb(239, 179, 208);
+ 
 }
 blockquote {
   color: #808080;
