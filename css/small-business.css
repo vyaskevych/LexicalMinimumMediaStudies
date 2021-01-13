@@ -50,7 +50,7 @@ a img:focus {
   border-radius: 8em;
   margin: auto;
   height: 50px;
-  width: 100%;
+  width: 97%;
 }
 a i:hover {
   background: #fbe9f2;
@@ -117,13 +117,14 @@ hr.small {
   }
   .search{
     width: 90%;
+    margin: auto;
     
   }
 }
-@media only screen and (min-width: 420px){
+@media only screen and (min-width: 350px){
   .search{
     width: 90%;
-    margin: 5;
+    margin: auto;
   }
 }
 @media only screen and (min-width: 1170px) {
