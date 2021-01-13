@@ -50,7 +50,7 @@ a img:focus {
   border-radius: 8em;
   margin: auto;
   height: 50px;
-  width: 97%;
+  width: 100%;
 }
 a i:hover {
   background: #fbe9f2;
