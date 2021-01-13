@@ -50,6 +50,7 @@ a img:focus {
   border-radius: 8em;
   margin: 15px;
   height: 50px;
+  width: 100%;
 }
 a i:hover {
   background: #fbe9f2;
@@ -113,6 +114,16 @@ hr.small {
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
+  }
+  .search{
+    width: 90%;
+    
+  }
+}
+@media only screen and (min-width: 420px){
+  .search{
+    width: 90%;
+    margin: 5;
   }
 }
 @media only screen and (min-width: 1170px) {
