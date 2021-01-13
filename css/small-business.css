@@ -48,9 +48,9 @@ a img:focus {
   border: 1px solid #cd0066;
   padding: .5em .8em .6em;
   border-radius: 8em;
-  margin: 15px;
+  margin: auto;
   height: 50px;
-  width: 100%;
+  width: 97%;
 }
 a i:hover {
   background: #fbe9f2;
