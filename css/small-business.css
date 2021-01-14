@@ -44,26 +44,35 @@ a img:focus {
   display: flex;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  flex-direction: row;
-  border: 1px solid #cd0066;
-  padding: .5em .8em .6em;
+  padding: .5em 0;
   border-radius: 8em;
-  margin: auto;
-  height: 50px;
+ text-align: center;
+  min-height: 48px;
   width: 97%;
+ 
+}
+.search p{
+  color: #cd0066;
+  text-align: center;
+  position: relative;
+  margin-top: 0.5rem;
+
 }
 a i:hover {
   background: #fbe9f2;
   color: #cc0066;
  border-radius: 50%;
   box-shadow: 0 10px 20px rgb(239, 179, 208);
+  cursor: pointer;
 }
-.search:focus
+.search span:hover
 {
   background: #fbe9f2;
-  color: #cc0066;
+  color: #404040;
   border: 1px solid #cc0066;
+  border-radius: 50%;
   box-shadow: 0 10px 20px rgb(239, 179, 208);
+  cursor: pointer;
  
 }
 blockquote {
