@@ -24,15 +24,16 @@ h6 {
 a {
   color: #404040;
 }
-a:hover,
-a:focus {
-  color: #0085a1;
-}
+
 a img:hover,
 a img:focus {
   cursor: zoom-in;
 }
-
+#navigation{
+  color: #ffff;
+  
+  text-shadow: #cc0066 1px 1px 2px;
+}
 section h2{
   margin-top: 5px;
     margin-bottom: 10px;
