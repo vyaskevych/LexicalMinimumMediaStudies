@@ -51,18 +51,19 @@ a img:focus {
   width: 97%;
  
 }
-.search p{
+.search a{
   color: #cd0066;
   text-align: center;
   position: relative;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  text-decoration: none;
 
 }
 a i:hover {
   background: #fbe9f2;
   color: #cc0066;
  border-radius: 50%;
-  box-shadow: 0 10px 20px rgb(239, 179, 208);
+  box-shadow: 0 10x 20px rgb(239, 179, 208);
   cursor: pointer;
 }
 .search span:hover
