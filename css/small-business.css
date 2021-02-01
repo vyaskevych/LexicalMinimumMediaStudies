@@ -50,6 +50,24 @@ section h2{
   margin-top: 5px;
     margin-bottom: 10px;
 }
+.caption_n{
+  padding-bottom: 10px;
+  
+}
+.pictogram{
+  font-size: 15x;
+  height: 15px;
+  width: 15px;
+  color: #0085a1;
+ 
+
+}
+.hrline{
+  height:2px;
+  border-width:0;
+  color:gray;
+  background-color:gray
+}
 .block{
   background-color:white;
   box-shadow: 0 0 3px 1px rgba(0,0,0,.35);
@@ -105,9 +123,9 @@ blockquote {
   font-style: italic;
 }
 hr.small {
-  max-width: 100px;
+  max-width: 150px;
   margin: 15px auto;
-  border-width: 4px;
+  border-width: 3px;
   border-color: white;
 }
 .navbar-custom {
@@ -221,7 +239,7 @@ border-radius: 0;
 
 
 .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
 }
@@ -275,7 +293,7 @@ border-radius: 0;
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
   margin-top: 10;
-  font-size: 60px;
+  font-size: 50px;
   font-family: 'Great Vibes', serif;
 }
 .intro-header .site-heading .subheading,
@@ -322,7 +340,7 @@ text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 50px;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
