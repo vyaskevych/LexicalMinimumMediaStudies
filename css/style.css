@@ -53,6 +53,12 @@ a img:focus {
   max-height: 30.5em;
 
 }
+.searchInput{
+  width: 100%;
+  border: 1px solid lightgray;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
 section h2{
   margin-top: 5px;
     margin-bottom: 10px;
