@@ -50,7 +50,7 @@ a img:focus {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
   overflow: auto;
-  max-height: 67.5em;
+  max-height: 57.5em;
 
 }
 section h2{
@@ -77,14 +77,13 @@ section h2{
   background-color:lightgray;
 }
 .paddingT{
-  padding-top: 9.5%;
+  padding-top: 6em;
 }
 .block{
   background-color:white;
-  box-shadow: 0 0 3px 1px rgba(0,0,0,.35);
-  padding: 15px;
+    padding: 5px;
   border: 1px solid #e5e7eb;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
     --tw-bg-opacity: 1;
     background-color: rgba(255,255,255,var(--tw-bg-opacity));
     border-radius: .25rem;
