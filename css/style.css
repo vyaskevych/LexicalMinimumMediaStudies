@@ -50,7 +50,7 @@ a img:focus {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
   overflow: auto;
-  max-height: 57.5em;
+  max-height: 30.5em;
 
 }
 section h2{
@@ -188,6 +188,13 @@ border-radius: 0;
     margin: auto;
     
   }
+ 
+  .listitems{
+   
+    max-height: 57.5em;
+  
+  }
+ 
 }
 @media only screen and (min-width: 350px){
   .search{
@@ -202,7 +209,7 @@ border-radius: 0;
   width: 100%;
   
   }
-  
+ 
 
 }
 @media only screen and (min-width: 1170px) {
@@ -327,6 +334,7 @@ border-bottom:1px solid #ccc;
 text-decoration: none;
 }
 
+
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
@@ -366,6 +374,8 @@ text-decoration: none;
     width:90%;
   }
 }
+
+
 
 
 .post-preview {
