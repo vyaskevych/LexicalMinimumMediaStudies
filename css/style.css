@@ -1,5 +1,7 @@
 
-
+.hide{
+  display: none;
+}
 body {
   font-family: Roboto, sans-serif;
   font-size: 18px;
@@ -102,6 +104,9 @@ section h2{
     --tw-border-opacity: 1;
     border-color: rgba(209,213,219,var(--tw-border-opacity));
  
+}
+option{
+  overflow:hidden;
 }
 .search{
  
