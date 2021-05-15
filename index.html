@@ -10,6 +10,7 @@
 
     <title>Лексичний мінімум медіазнавця</title>
 
+    <link rel="stylesheet" href="/css/bvi.min.css" type="text/css">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -47,7 +48,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1 tabindex="0">Лексичний мінімум медіазнавця</h1>
+                        <h1 tabindex="0" class="bvi-tts">Лексичний мінімум медіазнавця</h1>
                         <hr class="small">
 
                     </div>
@@ -224,7 +225,7 @@
                     <input class="searchInput" id="input" placeholder="Пошук терміна" name="searchInput" />
 
 
-                    <div class="list-group list-group-flush listitems">
+                    <div class="list-group list-group-flush listitems" id="leftlist">
 
                         <!-- <a href="#" class="list-group-item list-group-item-action"> Медіаналітика </a>
                         <a href="#" class="list-group-item list-group-item-action">Медіаарт</a>
@@ -232,7 +233,7 @@
                         <a href="#" class="list-group-item list-group-item-action">Медіааудиторія</a>
                         <a href="#" class="list-group-item list-group-item-action">Медіабезпека</a> -->
 
-                        <a href="#" class="searchItem list-group-item list-group-item-action">Маркетинг соціальних
+                        <!-- <a href="#" class="searchItem list-group-item list-group-item-action">Маркетинг соціальних
                             медіа</a>
                         <a href="#" class="searchItem list-group-item list-group-item-action">Мас-медіа</a>
                         <a href="#" class="searchItem list-group-item list-group-item-action">Медіа, медія</a>
@@ -341,7 +342,7 @@
                         <a href="#" class="searchItem list-group-item list-group-item-action">Мультимедіа</a>
                         <a href="#" class="searchItem list-group-item list-group-item-action">Мультимедійність</a>
                         <a href="#" class="searchItem list-group-item list-group-item-action">Мультимедійність
-                            контенту</a>
+                            контенту</a> -->
 
                     </div>
                 </div>
@@ -353,7 +354,7 @@
 
             <div class="col-md-6">
                 <section class="caption_n" tabindex="0">
-                    <h3 class="heading">Медіаарт</h3>
+                    <h3 id="termin" class="heading">Медіаарт</h3>
                     <span class="fa-stack fa-lg ">
                         <a tabindex="0" title="Відеоілюстрація"
                             href="https://www.youtube.com/watch?v=DV4Ya6XOwYs&feature=youtu.be&fbclid=%0BIwAR1qDXTaXt5ezpXkfiQxmB8T5Q7Qd6TkWXMjHAtMmVvzEggVQ-A00DMPGXc">
@@ -394,31 +395,40 @@
                 <div class="block">
                     <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
                     <hr class="hrline">
-                    <p> <a href="#" class="reduction lightblue">англ.</a>  mass media – средства массовой информации + art – искусство </p>
+                    <p id="etymology"> <a href="#" class="reduction lightblue">англ.</a> mass media – средства массовой
+                        информации +
+                        art – искусство </p>
                 </div>
 
                 <div class="block">
                     <h2 class="translateheader" tabindex="0">Еквівалент іншою мовою</h2>
                     <hr class="hrline">
-                    <p> <a href="#" class="reduction lightblue">рос.</a>  Медиа-арт, медиаарт, медиа арт </p>
+                    <p id="equivalent"> <a href="#" class="reduction lightblue">рос.</a> Медиа-арт, медиаарт, медиа арт
+                    </p>
                 </div>
+
                 <div class="block">
                     <h2 class="translateheader" tabindex="0">Синонім або відсилання до іншого терміна</h2>
                     <hr class="hrline">
-                    <p> <a href="#" class="lightblue reduction">див.</a> також Медіа-мистецтво / реком. Медіамистецтво </p>
+                    <p id="synonym"> <a href="#" class="lightblue reduction">див.</a> також Медіа-мистецтво / реком.
+                        Медіамистецтво
+                    </p>
                 </div>
 
                 <div class="block">
                     <h2 class="translateheader" tabindex="0">Словникове значення </h2>
                     <hr class="hrline">
-                    <p>"течение в современном искусстве, использующее в качестве художественного пространства такие
+                    <p id="vocabulary">"течение в современном искусстве, использующее в качестве художественного
+                        пространства такие
                         современные коммуникационные технологии, как Интернет, телефонная связь, пейджинг и т.п.". </p>
                 </div>
 
                 <div class="block ">
                     <h2 class="translateheader" tabindex="0">Джерело </h2>
                     <hr class="hrline">
-                    <p class="source lightblue ">Габдреева, Н.В. & Гурчиани, М.Т. (2012), Словарь композитов русского языка
+                    <p id="source" class="source lightblue ">Габдреева, Н.В. & Гурчиани, М.Т. (2012), Словарь композитов
+                        русского
+                        языка
                         новейшего периода, ФЛИНТА, Наука, Москва, режим доступа:
                         <a class="lightblue"
                             href="https://complex_words.academic.ru/1326/%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0%D0%B0%D1%80%D1%82https://complex_words.academic.ru/1326/%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0%D0%B0%D1%80%D1%82">посилання</a>
@@ -431,15 +441,18 @@
 
                     <div class="list-group list-group-flush listitems">
                         <a href="#" class="list-group-item list-group-item-action"> Про проєкт</a>
-                        <a href="#" class="list-group-item list-group-item-action">Версія для людей із вадами зору</a>
+                        <a href="#" class="bvi-open list-group-item list-group-item-action"
+                            title="Версия сайта для слабовидящих">Версія для людей із вадами зору</a>
                         <a href="#" class="list-group-item list-group-item-action">Медіатека</a>
                         <a href="#" class="list-group-item list-group-item-action">Словники медійних термінів </a>
-                         <a href="#footer" class="list-group-item list-group-item-action">Контакти</a>
+                        <a href="#footer" class="list-group-item list-group-item-action">Контакти</a>
 
                     </div>
-                
+
                 </div>
                 <a href="#" class="list-group-item list-group-item-action addTerm">Додати термін</a>
+
+
 
             </div>
 
@@ -505,15 +518,75 @@
         </div>
     </footer>
     <script src="./search.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.4.1/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBsMXq4l2KQDKHEcB356K5O0mY24WC3T90",
+            authDomain: "lexicalminimum.firebaseapp.com",
+            databaseURL: "https://lexicalminimum-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "lexicalminimum",
+            storageBucket: "lexicalminimum.appspot.com",
+            messagingSenderId: "494411586982",
+            appId: "1:494411586982:web:5cd721fd16cff5b7c3c367",
+            measurementId: "G-T3JT704E9D"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        let leftlist = document.getElementById('leftlist');
+        let termins = [];
+
+
+        function getData(event, type = 'LexicalMin') {
+            var dbRef = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/${type}`);
+            dbRef.on('value', snap => render(snap.val()));
+        }
+
+        function render(data) {
+            // console.log('data', data);
+            termins = data;
+            leftlist.innerHTML = "";
+            termins.forEach(item => renderItem(item));
+        }
+
+        function renderItem(item) {
+            if (item.termin !== '') {
+                leftlist.innerHTML += `
+            <a href="javascript:void(0);" class="searchItem list-group-item list-group-item-action" onclick="renderTermin(${item.id})">${item.termin}</a>
+          `
+            }
+        }
+
+        function renderTermin(id) {
+            let termin = termins.find(termin => termin.id === id);
+            for (let field in termin) {
+                const p = document.getElementById(field);
+                if(p){
+                    p.innerHTML = termin[field];
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => getData());
+
+
+    </script>
+
+    <!-- версія для людей з вадами зору -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/js/js.cookie.js"></script>
+    <script src="/js/bvi-init.js"></script>
+    <script src="/js/bvi.min.js"></script>
 </body>
 
 </html>
