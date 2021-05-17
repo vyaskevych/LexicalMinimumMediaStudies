@@ -10,7 +10,7 @@
 
     <title>Лексичний мінімум медіазнавця</title>
 
-    <link rel="stylesheet" href="css/bvi.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bvi.min.css" type="text/css">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -524,8 +524,7 @@
             </div>
         </div>
     </footer>
-   
-    <script src="./js/search.js"></script>
+    <script src="./search.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
 
@@ -584,10 +583,7 @@
             for (var key in termin) {
                 const p = document.getElementById(key);
                 if (p) {
-
-                    let description = termin[key];
-                    //функция description=addAbbr(description) 
-
+                    const description = termin[key];
                     p.innerHTML = description;
                     if (description) {
                         p.closest('div.block')?.classList.remove('hide');
@@ -643,7 +639,6 @@
 
 
         document.addEventListener('DOMContentLoaded', () => getData());
-
 
 
     </script>
