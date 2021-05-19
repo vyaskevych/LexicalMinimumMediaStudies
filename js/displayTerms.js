@@ -63,7 +63,7 @@ function renderTermin(id) {
 }
 
 function addAbbr(description) {
-    let abbrev = ['англ.', 'рос.', 'див. також', 'лат.', "див.",".син"];
+    let abbrev = ['англ.', 'рос.', 'див. також', 'лат.', "див.","син."];
  
            for (var k = 0; k < abbrev.length; k++) {
             description =  description.replace(abbrev[k], `<a href="#" class="lightblue">${abbrev[k]}</a>`);      
