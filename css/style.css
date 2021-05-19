@@ -284,10 +284,6 @@ text-decoration: none;
   color: white;
 }
 
-
-
-
-
 .post-preview {
   padding-bottom:20px;
 }
@@ -341,6 +337,9 @@ p.post-meta > a {
   display: block;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+.main{
+  min-height: 70vh;
 }
 footer {
   padding: 50px 0 65px;
