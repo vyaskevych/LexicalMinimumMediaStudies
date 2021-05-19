@@ -62,8 +62,52 @@ function renderTermin(id) {
     checkOtherDescription(id);
 }
 
+
+
+function checkOtherDescription(id) {
+    while (termins[++id].termin == '') {
+        let termin = termins[id];
+     
+      otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
+                    <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
+                    <hr class="hrline">
+                    <p>${addAbbr(termin.etymology)}</p>
+                </div>`: '';
+
+
+        otherDescription.innerHTML += termin.equivalent != '' ? `<div class="block">
+                <h2 class="translateheader" tabindex="0">Еквівалент іншою мовою</h2>
+                <hr class="hrline">
+                    <p id="equivalent">${addAbbr(termin.equivalent)}</p>
+                </div>`: '';
+
+        otherDescription.innerHTML += termin.synonym != '' ? `<div class="block">
+                    <h2 class="translateheader" tabindex="0">Синонім або відсилання до іншого терміна</h2>
+                    <hr class="hrline">
+                        <p id="synonym">${addAbbr(termin.synonym)}</p>
+                </div>`: '';
+
+        otherDescription.innerHTML += termin.vocabulary != '' ? `<div class="block">
+                        <h2 class="translateheader" tabindex="0">Словникове значення </h2>
+                        <hr class="hrline">
+                            <p id="vocabulary">${addAbbr(termin.vocabulary)}</p>
+                </div>`: '';
+
+        otherDescription.innerHTML += termin.contextual != '' ? `<div class="block">
+                            <h2 class="translateheader" tabindex="0">Контекстне значення </h2>
+                            <hr class="hrline">
+                                <p id="contextual">${addAbbr(termin.contextual)}</p>
+                </div>`: '';
+
+        otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
+                                <h2 class="translateheader" tabindex="0">Джерело </h2>
+                                <hr class="hrline">
+                                    <p id="source" class="source lightblue ">${addAbbr(termin.source)}</p>
+                </div>`: '';
+    }
+}
 function addAbbr(description) {
-    let abbrev = ['англ.', 'рос.', 'див. також', 'лат.', "див.","син."];
+    let abbrev = ['англ.', 'рос.', 'див. також', 'лат.', "див."];
  
            for (var k = 0; k < abbrev.length; k++) {
             description =  description.replace(abbrev[k], `<a href="#" class="lightblue">${abbrev[k]}</a>`);      
@@ -71,47 +115,6 @@ function addAbbr(description) {
 return description;
 }
 
-function checkOtherDescription(id) {
-    while (termins[++id].termin == '') {
-        let termin = termins[id];
-
-        otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
-                    <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
-                    <hr class="hrline">
-                    <p>${termin.etymology}</p>
-                </div>`: '';
-
-        otherDescription.innerHTML += termin.equivalent != '' ? `<div class="block">
-                <h2 class="translateheader" tabindex="0">Еквівалент іншою мовою</h2>
-                <hr class="hrline">
-                    <p id="equivalent">${termin.equivalent}</p>
-                </div>`: '';
-
-        otherDescription.innerHTML += termin.synonym != '' ? `<div class="block">
-                    <h2 class="translateheader" tabindex="0">Синонім або відсилання до іншого терміна</h2>
-                    <hr class="hrline">
-                        <p id="synonym">${termin.synonym}</p>
-                </div>`: '';
-
-        otherDescription.innerHTML += termin.vocabulary != '' ? `<div class="block">
-                        <h2 class="translateheader" tabindex="0">Словникове значення </h2>
-                        <hr class="hrline">
-                            <p id="vocabulary">${termin.vocabulary}</p>
-                </div>`: '';
-
-        otherDescription.innerHTML += termin.contextual != '' ? `<div class="block">
-                            <h2 class="translateheader" tabindex="0">Контекстне значення </h2>
-                            <hr class="hrline">
-                                <p id="contextual">${termin.contextual}</p>
-                </div>`: '';
-
-        otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
-                                <h2 class="translateheader" tabindex="0">Джерело </h2>
-                                <hr class="hrline">
-                                    <p id="source" class="source lightblue ">${termin.source}</p>
-                </div>`: '';
-    }
-}
 
 
 document.addEventListener('DOMContentLoaded', () => getData());
