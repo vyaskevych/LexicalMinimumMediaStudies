@@ -49,7 +49,7 @@ function renderTermin(id) {
         if (p) {
 
             let description = termin[key];
-           description = addAbbr(description);
+          description = addAbbr(addLink(description));
 
             p.innerHTML = description;
             if (description) {
@@ -102,7 +102,7 @@ function checkOtherDescription(id) {
         otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
                                 <h2 class="translateheader" tabindex="0">Джерело </h2>
                                 <hr class="hrline">
-                                    <p id="source" class="source lightblue ">${addAbbr(termin.source)}</p>
+                                <p id="source" class="source lightblue ">${addAbbr(addLink(termin.source))}</p>
                 </div>`: '';
     }
 }
@@ -115,6 +115,9 @@ function addAbbr(description) {
 return description;
 }
 
+       function addLink(text) {
+    return text = text.replace(/(https?:\/\/[^ >]+[\w/])/gmi, '<a class="lightblue" href=$1>$1</a>');
+}
                 
 
 
