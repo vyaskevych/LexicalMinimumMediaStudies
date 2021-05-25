@@ -107,7 +107,7 @@ function checkOtherDescription(id) {
     }
 }
 function addAbbr(description) {
-    let abbrev = ['англ.', 'рос.', "див.",'також', 'лат.'];
+    let abbrev = ['англ.', 'рос.', "див. також', 'лат.'];
  
            for (var k = 0; k < abbrev.length; k++) {
             description =  description.replaceAll(abbrev[k], `<a href="#" class="lightblue">${abbrev[k]}</a>`);      
