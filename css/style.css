@@ -343,7 +343,9 @@ p.post-meta > a {
 }
 
 .noactive:hover{
- background-color:rgb(145, 152, 160);
+ background-color: rgb(212, 215, 221);
+ opacity: 0.8;
+ color:rgb(197, 201, 204);
   
 }
 
