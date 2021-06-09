@@ -44,6 +44,8 @@ function renderTermin(id) {
     //let termin = termins.find(termin => termin.id === id);
     let termin = termins[id];
 
+    checkOtherSrc(termin);
+
     for (var key in termin) {
         const p = document.getElementById(key);
         if (p) {
@@ -106,7 +108,7 @@ function checkOtherDescription(id) {
         otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
                                 <h2 class="translateheader" tabindex="0">Джерело </h2>
                                 <hr class="hrline">
-                                <p id="source" class="source lightblue ">${addSrc(termin)}</p>
+                                <p id="source" class="source lightblue ">${termin.URL ? addSrc(termin) : termin.source}</p>
                 </div>`: '';
     }
 }
@@ -123,10 +125,22 @@ function addLink(text) {
     return text = text.replace(/(https?:\/\/[^ >]+[\w/])/gmi, '<a class="lightblue" href=$1>$1</a>');
 }
 
-function addSrc(termin){
+function addSrc(termin) {
     if (termin.URL) {
         console.log('url', termin.URL)
         return `<a class="source lightblue" href="${termin.URL}" target="_blank">${termin.source}</a>`
+    }
+}
+
+function checkOtherSrc(termin){
+    const linkPresent = document.querySelector('a[title="Презентація"]');
+    console.log('linkPresent', linkPresent)
+    if(termin.presentation){
+        linkPresent.setAttribute('href', termin.presentation);
+        linkPresent.firstElementChild.classList.remove('noactive');
+    } else {
+        linkPresent.removeAttribute('href');
+        linkPresent.firstElementChild.classList.add('noactive');
     }
 }
 
