@@ -39,6 +39,8 @@ function renderItem(item) {
     }
 }
 
+
+
 function renderTermin(id) {
     otherDescription.innerHTML = '';
     //let termin = termins.find(termin => termin.id === id);
@@ -64,46 +66,45 @@ function renderTermin(id) {
 function checkOtherDescription(id) {
     while (termins[++id].termin == '') {
         let termin = termins[id];
-
-        otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
-                    <h2 class="translateheader" tabindex="0">Р•С‚РёРјРѕР»РѕРіС–СЏ С‚РµСЂРјС–РЅР°</h2>
+     
+      otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
+                    <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
                     <hr class="hrline">
                     <p>${addAbbr(termin.etymology)}</p>
                 </div>`: '';
 
 
         otherDescription.innerHTML += termin.equivalent != '' ? `<div class="block">
-                <h2 class="translateheader" tabindex="0">Р•РєРІС–РІР°Р»РµРЅС‚ С–РЅС€РѕСЋ РјРѕРІРѕСЋ</h2>
+                <h2 class="translateheader" tabindex="0">Еквівалент іншою мовою</h2>
                 <hr class="hrline">
                     <p id="equivalent">${addAbbr(termin.equivalent)}</p>
                 </div>`: '';
 
         otherDescription.innerHTML += termin.synonym != '' ? `<div class="block">
-                    <h2 class="translateheader" tabindex="0">РЎРёРЅРѕРЅС–Рј Р°Р±Рѕ РІС–РґСЃРёР»Р°РЅРЅСЏ РґРѕ С–РЅС€РѕРіРѕ С‚РµСЂРјС–РЅР°</h2>
+                    <h2 class="translateheader" tabindex="0">Синонім або відсилання до іншого терміна</h2>
                     <hr class="hrline">
                         <p id="synonym">${addAbbr(termin.synonym)}</p>
                 </div>`: '';
 
         otherDescription.innerHTML += termin.vocabulary != '' ? `<div class="block">
-                        <h2 class="translateheader" tabindex="0">РЎР»РѕРІРЅРёРєРѕРІРµ Р·РЅР°С‡РµРЅРЅСЏ </h2>
+                        <h2 class="translateheader" tabindex="0">Словникове значення </h2>
                         <hr class="hrline">
                             <p id="vocabulary">${addAbbr(termin.vocabulary)}</p>
                 </div>`: '';
 
         otherDescription.innerHTML += termin.contextual != '' ? `<div class="block">
-                            <h2 class="translateheader" tabindex="0">РљРѕРЅС‚РµРєСЃС‚РЅРµ Р·РЅР°С‡РµРЅРЅСЏ </h2>
+                            <h2 class="translateheader" tabindex="0">Контекстне значення </h2>
                             <hr class="hrline">
                                 <p id="contextual">${addAbbr(termin.contextual)}</p>
                 </div>`: '';
 
         otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
-                                <h2 class="translateheader" tabindex="0">Р”Р¶РµСЂРµР»Рѕ </h2>
+                                <h2 class="translateheader" tabindex="0">Джерело </h2>
                                 <hr class="hrline">
-                                    <p id="source" class="source lightblue ">${addAbbr(addLink(termin.source))}</p>
+                                <p id="source" class="source lightblue ">${addAbbr(addLink(termin.source))}</p>
                 </div>`: '';
     }
 }
-
 function addAbbr(description) {
     let abbrev = ['англ.', 'рос.', 'див. також', 'див.', 'лат.','син.'];
            for (var k = 0; k < abbrev.length; k++) {
