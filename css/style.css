@@ -130,8 +130,7 @@ option{
 }
 a i:hover, .icon:hover {
   background: #e9f4fbde;
-  
- border-radius: 50%;
+  border-radius: 50%;
   box-shadow: 0 10x 20px rgba(224, 250, 255, 0.904);
   cursor: pointer;
 }
@@ -338,6 +337,16 @@ p.post-meta > a {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.noactive{
+  cursor: default !important;
+  
+}
+
+.noactive:hover{
+ background-color:rgb(145, 152, 160);
+  
+}
+
 .main{
   min-height: 70vh;
 }
