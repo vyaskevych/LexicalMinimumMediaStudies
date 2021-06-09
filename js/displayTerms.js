@@ -19,11 +19,11 @@ let otherDescription = document.getElementById('otherDescription');
 let termins = [];
 
 
-
 function getData(event, type = 'LexicalMin') {
     var dbRef = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/${type}`);
-    dbRef.on('value', snap => {render(snap.val()); renderTermin(0)});
+    dbRef.on('value', snap => { render(snap.val()); renderTermin(0) });
 }
+
 function render(data) {
     // console.log('data', data);
     termins = data;
@@ -39,17 +39,18 @@ function renderItem(item) {
     }
 }
 
-
-
 function renderTermin(id) {
     otherDescription.innerHTML = '';
     //let termin = termins.find(termin => termin.id === id);
     let termin = termins[id];
+
     for (var key in termin) {
         const p = document.getElementById(key);
         if (p) {
+
             let description = termin[key];
             description = addAbbr(addLink(description));
+
             p.innerHTML = description;
             if (description) {
                 p.closest('div.block')?.classList.remove('hide');
@@ -57,6 +58,10 @@ function renderTermin(id) {
                 p.closest('div.block')?.classList.add('hide');
             }
         }
+    }
+    if (termin.URL) {
+        const src = document.getElementById('source');
+        src.innerHTML = addSrc(termin);
     }
     checkOtherDescription(id);
 }
@@ -66,8 +71,8 @@ function renderTermin(id) {
 function checkOtherDescription(id) {
     while (termins[++id].termin == '') {
         let termin = termins[id];
-     
-      otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
+
+        otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
                     <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
                     <hr class="hrline">
                     <p>${addAbbr(termin.etymology)}</p>
@@ -101,22 +106,29 @@ function checkOtherDescription(id) {
         otherDescription.innerHTML += termin.source != '' ? `<div class="block ">
                                 <h2 class="translateheader" tabindex="0">Джерело </h2>
                                 <hr class="hrline">
-                                <p id="source" class="source lightblue ">${addAbbr(addLink(termin.source))}</p>
+                                <p id="source" class="source lightblue ">${addSrc(termin)}</p>
                 </div>`: '';
     }
 }
 function addAbbr(description) {
-    let abbrev = ['англ.', 'рос.', 'див. також', 'див.', 'лат.','син.'];
-           for (var k = 0; k < abbrev.length; k++) {
-            description =  description.replaceAll(abbrev[k], `<span class="lightblue">${abbrev[k]}</span>`);      
+    let abbrev = ['англ.', 'рос.', 'див. також', 'див.', 'лат.', 'син.'];
+
+    for (var k = 0; k < abbrev.length; k++) {
+        description = description.replaceAll(abbrev[k], `<span class="lightblue">${abbrev[k]}</span>`);
     }
-return description;
+    return description;
 }
+
 function addLink(text) {
-    return text = text.replace(/(https?:\/\/[^ >]+[\w/])/gmi, '<a class="lightblue" href=$1>посилання</a>');
+    return text = text.replace(/(https?:\/\/[^ >]+[\w/])/gmi, '<a class="lightblue" href=$1>$1</a>');
 }
 
-
+function addSrc(termin){
+    if (termin.URL) {
+        console.log('url', termin.URL)
+        return `<a class="source lightblue" href="${termin.URL}" target="_blank">${termin.source}</a>`
+    }
+}
 
 
 document.addEventListener('DOMContentLoaded', () => getData());
