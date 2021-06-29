@@ -127,20 +127,35 @@ function addLink(text) {
 
 function addSrc(termin) {
     if (termin.URL) {
-        console.log('url', termin.URL)
+        // console.log('url', termin.URL)
         return `<a class="source lightblue" href="${termin.URL}" target="_blank">${termin.source}</a>`
     }
 }
 
 function checkOtherSrc(termin){
-    const linkPresent = document.querySelector('a[title="Презентація"]');
-    console.log('linkPresent', linkPresent)
-    if(termin.presentation){
-        linkPresent.setAttribute('href', termin.presentation);
-        linkPresent.firstElementChild.classList.remove('noactive');
+    // const linkPresent = document.querySelector('a[title="Презентація"]');
+    // const linkVideo = document.querySelector('a[title="Відеоілюстрація"]');
+
+    // if(termin.presentation){
+    //     linkPresent.setAttribute('href', termin.presentation);
+    //     linkPresent.firstElementChild.classList.remove('noactive');
+    // } else {
+    //     linkPresent.removeAttribute('href');
+    //     linkPresent.firstElementChild.classList.add('noactive');
+    // }
+
+    setOtherSrc(document.querySelector('a[title="Презентація"]'), termin.presentation);
+    setOtherSrc(document.querySelector('a[title="Відеоілюстрація"]'), termin.video);
+    setOtherSrc(document.querySelector('a[title="Наукова праця"]'), termin.article);
+}
+
+function setOtherSrc(element, link){
+    if(link){
+        element.setAttribute('href', link);
+        element.firstElementChild.classList.remove('noactive');
     } else {
-        linkPresent.removeAttribute('href');
-        linkPresent.firstElementChild.classList.add('noactive');
+        element.removeAttribute('href');
+        element.firstElementChild.classList.add('noactive');
     }
 }
 
