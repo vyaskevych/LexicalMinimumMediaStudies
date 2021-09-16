@@ -189,6 +189,7 @@ hr.small {
   z-index: 3;
   font-family: Roboto, sans-serif;
   margin-bottom: 0 !important;
+  position: fixed;
 
 }
 
@@ -608,18 +609,41 @@ img::-moz-selection {
 .about:target {
   display: block !important;
 }
+
 .about p {
   font-size: 16px;
+  text-align: justify;
 }
-.indent{
-  padding: 45px 0 0 0;
+
+.indent {
+  padding: 35px 0 0 0;
 }
+
 /* .about a{
   text-decoration: none;
   color:#0085a1;
 } */
-.about a:hover{
+.about a:hover {
   text-decoration: underline;
+}
+
+.about ol {
+  list-style-type: none;
+  /* Убираем исходные маркеры */
+  counter-reset: item;
+  /* Обнуляем счетчик списка */
+}
+
+.about ol li:before {
+  content: counter(item) ')\00a0\00a0';
+  /* Добавляем к числам скобку */
+  counter-increment: item;
+  /* Задаём имя счетчика */
+}
+
+.about ol,
+.about ul {
+  text-align: justify;
 }
 
 
@@ -720,12 +744,34 @@ img::-moz-selection {
   background: #98a7c4;
 } */
 
+@media only screen and (min-width: 350px) {
+  .search {
+    width: 90%;
+    margin: auto;
+  }
+
+  .navbar-custom {
+    background: grey;
+    opacity: 0.8;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    position: relative;
+
+  }
+  .about .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
 
 @media only screen and (min-width: 768px) {
+  
+  nav.navbar-custom {
+    position: fixed;
+  }
 
   .navbar-custom .navbar-brand {
     color: white;
-
   }
 
   .navbar-custom .navbar-brand:hover,
@@ -750,29 +796,17 @@ img::-moz-selection {
   }
 
   .listitems {
-
     max-height: 48em;
+  }
 
+  .about .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 }
 
-@media only screen and (min-width: 350px) {
-  .search {
-    width: 90%;
-    margin: auto;
-  }
 
-  .navbar-custom {
-    background: grey;
-    opacity: 0.8;
-    border-bottom: 1px solid transparent;
-    width: 100%;
-
-  }
-
-
-}
 
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
