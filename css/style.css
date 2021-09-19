@@ -594,12 +594,15 @@ img::-moz-selection {
 
 }
 
+.wrapper{
+  position: relative;
+}
 .about {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
