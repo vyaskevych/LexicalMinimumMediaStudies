@@ -649,6 +649,22 @@ img::-moz-selection {
   text-align: justify;
 }
 
+/* teleglossary */
+a[data-toggle="collapse"]{
+  cursor: pointer;
+}
+
+#teleglossary{
+  /* display: none; */
+  list-style: none;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+/* #teleglossary:target{
+  display: block;
+} */
+
 
 /* стили для форми */
 /* .transparent {
