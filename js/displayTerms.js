@@ -171,6 +171,6 @@ let list = document.getElementById("list");
 
 function renderTeleglossary(data) {
     console.log("glossary", data);
-    list.insertAdjacentHTML("beforeend", data.map(item => `<li class="${item.termin[0]}"><a 
+    list.insertAdjacentHTML("beforeend", data.map(item => `<li class="${item.termin[0]} list-group-item list-group-item-action"><a 
     href="${item?.link}">${item.termin}</a></li>`).join(""))
 }
