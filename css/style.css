@@ -673,6 +673,7 @@ a[data-toggle="collapse"] {
 #teleglossary>ul:nth-of-type(1) label {
   padding: 3px 10px;
   cursor: pointer;
+  color: #555;
 }
 
 a#teleglossary>ul:nth-of-type(1) label:hover {
@@ -685,76 +686,255 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
   display: none;
 }
 
+#А:checked~ul label[for="А"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
 #Б:checked~#list li:not(.Б) {
   display: none;
+}
+#Б:checked~ul label[for="Б"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #В:checked~#list li:not(.В) {
   display: none;
 }
 
+#В:checked~ul label[for="В"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Г:checked~#list li:not(.Г) {
+  display: none;
+}
+#Г:checked~ul label[for="Г"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Ґ:checked~#list li:not(.Ґ) {
+  display: none;
+}
+#Ґ:checked~ul label[for="Ґ"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
 #Д:checked~#list li:not(.Д) {
   display: none;
+}
+#Д:checked~ul label[for="Д"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #Е:checked~#list li:not(.Е) {
   display: none;
 }
+#Е:checked~ul label[for="Е"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Є:checked~#list li:not(.Є) {
+  display: none;
+}
+#Є:checked~ul label[for="Є"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #Ж:checked~#list li:not(.Ж) {
   display: none;
+}
+#Ж:checked~ul label[for="Ж"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #З:checked~#list li:not(.З) {
   display: none;
 }
+#З:checked~ul label[for="З"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #І:checked~#list li:not(.І) {
   display: none;
+}
+#І:checked~ul label[for="І"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Ї:checked~#list li:not(.Ї) {
+  display: none;
+}
+#Ї:checked~ul label[for="Ї"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Й:checked~#list li:not(.Й) {
+  display: none;
+}
+#Й:checked~ul label[for="Й"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #К:checked~#list li:not(.К) {
   display: none;
 }
+#К:checked~ul label[for="К"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #Л:checked~#list li:not(.Л) {
   display: none;
+}
+#Л:checked~ul label[for="Л"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #М:checked~#list li:not(.М) {
   display: none;
 }
+#М:checked~ul label[for="М"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #Н:checked~#list li:not(.Н) {
   display: none;
+}
+#Н:checked~ul label[for="Н"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #О:checked~#list li:not(.О) {
   display: none;
 }
+#О:checked~ul label[for="О"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #П:checked~#list li:not(.П) {
   display: none;
+}
+#П:checked~ul label[for="П"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #Р:checked~#list li:not(.Р) {
   display: none;
 }
+#Р:checked~ul label[for="Р"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #С:checked~#list li:not(.С) {
   display: none;
+}
+#С:checked~ul label[for="С"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 #Т:checked~#list li:not(.Т) {
   display: none;
 }
+#Т:checked~ul label[for="Т"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#У:checked~#list li:not(.У) {
+  display: none;
+}
+#У:checked~ul label[for="У"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #Ф:checked~#list li:not(.Ф) {
   display: none;
 }
+#Ф:checked~ul label[for="Ф"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Х:checked~#list li:not(.Х) {
+  display: none;
+}
+#Х:checked~ul label[for="Х"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Ц:checked~#list li:not(.Ц) {
+  display: none;
+}
+#Ц:checked~ul label[for="Ц"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Ч:checked~#list li:not(.Ч) {
+  display: none;
+}
+#Ч:checked~ul label[for="Ч"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
 
 #Ш:checked~#list li:not(.Ш) {
   display: none;
+}
+#Ш:checked~ul label[for="Ш"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Щ:checked~#list li:not(.Щ) {
+  display: none;
+}
+#Щ:checked~ul label[for="Щ"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Ю:checked~#list li:not(.Ю) {
+  display: none;
+}
+#Ю:checked~ul label[for="Ю"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#Я:checked~#list li:not(.Я) {
+  display: none;
+}
+#Я:checked~ul label[for="Я"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
+#all:checked~ul label[for="all"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 
