@@ -132,7 +132,7 @@ function addSrc(termin) {
     }
 }
 
-function checkOtherSrc(termin){
+function checkOtherSrc(termin) {
     // const linkPresent = document.querySelector('a[title="Презентація"]');
     // const linkVideo = document.querySelector('a[title="Відеоілюстрація"]');
 
@@ -149,8 +149,8 @@ function checkOtherSrc(termin){
     setOtherSrc(document.querySelector('a[title="Наукова праця"]'), termin.article);
 }
 
-function setOtherSrc(element, link){
-    if(link){
+function setOtherSrc(element, link) {
+    if (link) {
         element.setAttribute('href', link);
         element.firstElementChild.classList.remove('noactive');
     } else {
@@ -160,5 +160,17 @@ function setOtherSrc(element, link){
 }
 
 
-document.addEventListener('DOMContentLoaded', () => getData());
+document.addEventListener('DOMContentLoaded', () => { getData(); getTeleglossary() });
 
+function getTeleglossary(event, type = 'teleglossary') {
+    var dbRef = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/${type}`);
+    dbRef.on('value', snap => { renderTeleglossary(snap.val()) });
+}
+
+let list = document.getElementById("list");
+
+function renderTeleglossary(data) {
+    console.log("glossary", data);
+    list.insertAdjacentHTML("beforeend", data.map(item => `<li class="${item.termin[0]}"><a 
+    href="${item?.link}">${item.termin}</a></li>`).join(""))
+}

@@ -594,9 +594,10 @@ img::-moz-selection {
 
 }
 
-.wrapper{
+.wrapper {
   position: relative;
 }
+
 .about {
   position: absolute;
   top: 0;
@@ -650,15 +651,128 @@ img::-moz-selection {
 }
 
 /* teleglossary */
-a[data-toggle="collapse"]{
+a[data-toggle="collapse"] {
   cursor: pointer;
 }
 
-#teleglossary{
+#teleglossary input {
+  display: none;
+}
+
+#teleglossary>ul:nth-of-type(1) {
   /* display: none; */
   list-style: none;
-  height: 400px;
-  overflow-y: scroll;
+  /* height: 400px;
+  overflow-y: scroll; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+#teleglossary>ul:nth-of-type(1) label {
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+a#teleglossary>ul:nth-of-type(1) label:hover {
+  color: #555;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+#А:checked~#list li:not(.А) {
+  display: none;
+}
+
+#Б:checked~#list li:not(.Б) {
+  display: none;
+}
+
+#В:checked~#list li:not(.В) {
+  display: none;
+}
+
+#Д:checked~#list li:not(.Д) {
+  display: none;
+}
+
+#Е:checked~#list li:not(.Е) {
+  display: none;
+}
+
+#Ж:checked~#list li:not(.Ж) {
+  display: none;
+}
+
+#З:checked~#list li:not(.З) {
+  display: none;
+}
+
+#І:checked~#list li:not(.І) {
+  display: none;
+}
+
+#К:checked~#list li:not(.К) {
+  display: none;
+}
+
+#Л:checked~#list li:not(.Л) {
+  display: none;
+}
+
+#М:checked~#list li:not(.М) {
+  display: none;
+}
+
+#Н:checked~#list li:not(.Н) {
+  display: none;
+}
+
+#О:checked~#list li:not(.О) {
+  display: none;
+}
+
+#П:checked~#list li:not(.П) {
+  display: none;
+}
+
+#Р:checked~#list li:not(.Р) {
+  display: none;
+}
+
+#С:checked~#list li:not(.С) {
+  display: none;
+}
+
+#Т:checked~#list li:not(.Т) {
+  display: none;
+}
+
+#Ф:checked~#list li:not(.Ф) {
+  display: none;
+}
+
+#Ш:checked~#list li:not(.Ш) {
+  display: none;
+}
+
+
+
+
+#list {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, fit-content(100px)); */
+  padding: 0;
+  overflow: auto;
+
+}
+
+#list>li {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
 
 /* #teleglossary:target{
@@ -777,6 +891,7 @@ a[data-toggle="collapse"]{
     position: relative;
 
   }
+
   .about .container {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -784,7 +899,7 @@ a[data-toggle="collapse"]{
 }
 
 @media only screen and (min-width: 768px) {
-  
+
   nav.navbar-custom {
     position: fixed;
   }
