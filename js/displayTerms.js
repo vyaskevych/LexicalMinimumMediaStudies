@@ -74,7 +74,7 @@ function checkOtherDescription(id) {
     while (termins[++id].termin == '') {
         let termin = termins[id];
 
-        otherDescription.innerHTML = termin.etymology != '' ? `<div class="block">
+        otherDescription.innerHTML += termin.etymology != '' ? `<div class="block">
                     <h2 class="translateheader" tabindex="0">Етимологія терміна</h2>
                     <hr class="hrline">
                     <p>${addAbbr(termin.etymology)}</p>
