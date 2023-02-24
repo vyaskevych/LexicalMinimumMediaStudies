@@ -932,6 +932,14 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
   color: #f5f5f5;
 }
 
+#V:checked~#list li:not(.V) {
+  display: none;
+}
+#V:checked~ul label[for="V"] {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
+}
+
 #all:checked~ul label[for="all"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
