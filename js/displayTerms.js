@@ -170,14 +170,15 @@ function getTeleglossary(event, type = 'teleglossary') {
 let list = document.getElementById("list");
 
 function renderTeleglossary(data) {
-    console.log("glossary", data);
     list.innerHTML = "";
-    list.insertAdjacentHTML("beforeend", data.map(item => `<li class="${getFirstLetter(item.termin[0])} list-group-item list-group-item-action"><a 
+    list.insertAdjacentHTML("beforeend", data.map(item => `<li class="${getFirstLetter(item.termin)} list-group-item list-group-item-action"><a 
     href="${item?.link}" type="video">${item.termin}</a></li>`).join(""))
 }
 
 function getFirstLetter(letter){
     letter = letter.toUpperCase();
+    letter = letter.replace(/[^A-Za-zА-Яа-яЇЄҐ]/i, "");
+    letter = letter[0];    
     const LettersMap = {
         A: 'А',
         B: 'Б',
