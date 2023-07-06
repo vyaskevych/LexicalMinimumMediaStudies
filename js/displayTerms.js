@@ -147,6 +147,7 @@ function checkOtherSrc(termin) {
     setOtherSrc(document.querySelector('a[title="Презентація"]'), termin.presentation);
     setOtherSrc(document.querySelector('a[title="Відеоілюстрація"]'), termin.video);
     setOtherSrc(document.querySelector('a[title="Наукова праця"]'), termin.article);
+    setOtherSrc(document.querySelector('a[title="Навчальна дисципліна"]'), termin.discipline);
 }
 
 function setOtherSrc(element, link) {
