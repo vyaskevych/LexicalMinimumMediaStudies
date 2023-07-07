@@ -147,7 +147,7 @@ function checkOtherSrc(termin) {
     setOtherSrc(document.querySelector('a[title="Презентація"]'), termin.presentation);
     setOtherSrc(document.querySelector('a[title="Відеоілюстрація"]'), termin.video);
     setOtherSrc(document.querySelector('a[title="Наукова праця"]'), termin.article);
-    setOtherSrc(document.querySelector('a[title="Навчальна дисципліна"]'), termin.discipline);
+    setList(document.querySelector('a[title="Навчальна дисципліна"]'), termin.discipline);
 }
 
 function setOtherSrc(element, link) {
@@ -160,6 +160,26 @@ function setOtherSrc(element, link) {
     }
 }
 
+function setList(element, text) {
+    if (text) {
+        console.log('setList', text);
+        console.log('newList', parseListOfDiscipline(text));
+        createListLink(element.nextElementSibling, parseListOfDiscipline(text));
+        element.firstElementChild.classList.remove('noactive');
+    } else {
+        element.firstElementChild.classList.add('noactive');
+    }
+}
+
+function parseListOfDiscipline(text = '') {
+    let list = [];
+    list = text.split(',').map(item => item.split(/-\s+(?=http)/gmi).map(e => e.trim()));
+    return list;
+}
+
+function createListLink(element, list=[[]]){
+    element.innerHTML = list.map(item=>`<a class="dropdown-item" href="${item[1]}" target="_blank">${item[0]}</a>`).join('');
+}
 
 document.addEventListener('DOMContentLoaded', () => { getData(); getTeleglossary() });
 
@@ -176,10 +196,10 @@ function renderTeleglossary(data) {
     href="${item?.link}" type="video">${item.termin}</a></li>`).join(""))
 }
 
-function getFirstLetter(letter){
+function getFirstLetter(letter) {
     letter = letter.toUpperCase();
     letter = letter.replace(/[^A-Za-zА-Яа-яЇЄҐ]/i, "");
-    letter = letter[0];    
+    letter = letter[0];
     const LettersMap = {
         A: 'А',
         B: 'Б',
