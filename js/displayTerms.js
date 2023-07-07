@@ -167,6 +167,8 @@ function setList(element, text) {
         createListLink(element.nextElementSibling, parseListOfDiscipline(text));
         element.firstElementChild.classList.remove('noactive');
     } else {
+        element.nextElementSibling.innerHTML = "";
+        element.nextElementSibling.classList.remove('dropdown-menu');
         element.firstElementChild.classList.add('noactive');
     }
 }
@@ -177,8 +179,13 @@ function parseListOfDiscipline(text = '') {
     return list;
 }
 
-function createListLink(element, list=[[]]){
-    element.innerHTML = list.map(item=>`<a class="dropdown-item" href="${item[1]}" target="_blank">${item[0]}</a>`).join('');
+function createListLink(element, list) {
+    element.innerHTML = ""
+    if (list === undefined || !Array.isArray(list) || !Array.isArray(list[0])) {
+        return;
+    }
+    element.classList.add('dropdown-menu');
+    element.innerHTML = list.map(item => `<a class="dropdown-item" href="${item[1]}" target="_blank">${item[0]}</a>`).join('');
 }
 
 document.addEventListener('DOMContentLoaded', () => { getData(); getTeleglossary() });
