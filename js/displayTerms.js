@@ -175,7 +175,7 @@ function setList(element, text) {
 
 function parseListOfDiscipline(text = '') {
     let list = [];
-    list = text.split(',').map(item => item.split(/-\s+(?=http)/gmi).map(e => e.trim()));
+    list = text.split(/,$/gm).map(item => item.split(/-\s+(?=http)/gmi).map(e => e.trim()));
     return list;
 }
 
