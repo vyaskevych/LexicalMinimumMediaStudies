@@ -144,18 +144,25 @@ function checkOtherSrc(termin) {
     //     linkPresent.firstElementChild.classList.add('noactive');
     // }
 
-    setOtherSrc(document.querySelector('a[title="Презентація"]'), termin.presentation);
+    if (isOneLink(termin.presentation)) setOtherSrc(document.querySelector('a[title="Презентація"]'), termin.presentation);
+    else setList(document.querySelector('a[title="Презентація"]'), termin.presentation);
     setOtherSrc(document.querySelector('a[title="Відеоілюстрація"]'), termin.video);
     setOtherSrc(document.querySelector('a[title="Наукова праця"]'), termin.article);
     setList(document.querySelector('a[title="Навчальна дисципліна"]'), termin.discipline);
 }
 
+function isOneLink(text) {
+    return text.length === 0 || text.trim().indexOf('http') === 0;
+}
+
 function setOtherSrc(element, link) {
     if (link) {
         element.setAttribute('href', link);
+        element.removeAttribute('data-toggle');
         element.firstElementChild.classList.remove('noactive');
     } else {
         element.removeAttribute('href');
+        element.setAttribute('data-toggle', "dropdown");
         element.firstElementChild.classList.add('noactive');
     }
 }
@@ -164,18 +171,20 @@ function setList(element, text) {
     if (text) {
         console.log('setList', text);
         console.log('newList', parseListOfDiscipline(text));
+        element.setAttribute('data-toggle', "dropdown");
         createListLink(element.nextElementSibling, parseListOfDiscipline(text));
         element.firstElementChild.classList.remove('noactive');
     } else {
         element.nextElementSibling.innerHTML = "";
         element.nextElementSibling.classList.remove('dropdown-menu');
         element.firstElementChild.classList.add('noactive');
+        element.removeAttribute('data-toggle');
     }
 }
 
 function parseListOfDiscipline(text = '') {
     let list = [];
-    list = text.split(/,$/gm).map(item => item.split(/-\s+(?=http)/gmi).map(e => e.trim()));
+    list = text.split(/,\s*$/gm).map(item => item.split(/-\s+(?=http)/gmi).map(e => e.trim()));
     return list;
 }
 
