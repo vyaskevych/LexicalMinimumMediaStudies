@@ -214,7 +214,7 @@ function renderTeleglossary(data) {
 
 function getFirstLetter(letter) {
     letter = letter.toUpperCase();
-    letter = letter.replace(/[^A-Za-zА-Яа-яЇЄҐ]/i, "");
+    letter = letter.replace(/[^A-ZА-ЯЇІЄҐ]/i, "");
     letter = letter[0];
     const LettersMap = {
         A: 'А',
@@ -245,4 +245,43 @@ function getFirstLetter(letter) {
         Z: 'З',
     }
     return LettersMap[letter] ? LettersMap[letter] : letter;
+}
+
+
+/**
+ * Створення словника медійнрих термінів
+ */
+
+document.querySelector('[data-target="#dictionaries"]').addEventListener('click', getDictionaries);
+document.querySelector('#dictionaries ul:nth-of-type(1)').addEventListener('click', filterDictionaries);
+
+let data = [];
+
+function getDictionaries(event, type = 'dictionaries') {
+    const targetList = document.querySelector(`#${type} ul:nth-of-type(2)`)
+    var dbRef = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/${type}`);
+    dbRef.on('value', snap => { renderDictionaries(clearEmptyData(snap.val()), targetList) });
+}
+
+function clearEmptyData(inputData) {
+    data = inputData.filter((item) => item.termin.trim() !== '');
+    return data;
+}
+
+function renderDictionaries(data, element) {
+    element.innerHTML = "";
+    element.insertAdjacentHTML("beforeend", data.map(item => `<li class="list-group-item list-group-item-action"><a 
+    href="${item?.link.trim()}">${item.termin.trim()}</a></li>`).join(""));
+}
+
+function filterDictionaries(event) {
+    const letter = event.target.dataset.letter;
+    const targetList = document.querySelector(`#dictionaries ul:nth-of-type(2)`);
+    if (!letter) return;
+    const activeLetter = document.querySelectorAll('.active');
+    activeLetter.forEach(element => element.classList.remove('active'));
+    event.target.classList.add('active');
+    if (letter === 'all') return renderDictionaries(data, targetList);
+    filteredData = data.filter(item => item.termin.trim()[0].toUpperCase() === letter);
+    renderDictionaries(filteredData, targetList);
 }

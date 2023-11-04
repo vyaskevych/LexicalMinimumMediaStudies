@@ -676,7 +676,7 @@ a[data-toggle="collapse"] {
   color: #555;
 }
 
-a#teleglossary>ul:nth-of-type(1) label:hover {
+#teleglossary>ul:nth-of-type(1) label:hover {
   color: #555;
   text-decoration: none;
   background-color: #f5f5f5;
@@ -694,6 +694,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Б:checked~#list li:not(.Б) {
   display: none;
 }
+
 #Б:checked~ul label[for="Б"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -711,6 +712,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Г:checked~#list li:not(.Г) {
   display: none;
 }
+
 #Г:checked~ul label[for="Г"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -719,6 +721,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ґ:checked~#list li:not(.Ґ) {
   display: none;
 }
+
 #Ґ:checked~ul label[for="Ґ"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -727,6 +730,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Д:checked~#list li:not(.Д) {
   display: none;
 }
+
 #Д:checked~ul label[for="Д"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -735,6 +739,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Е:checked~#list li:not(.Е) {
   display: none;
 }
+
 #Е:checked~ul label[for="Е"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -743,6 +748,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Є:checked~#list li:not(.Є) {
   display: none;
 }
+
 #Є:checked~ul label[for="Є"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -751,6 +757,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ж:checked~#list li:not(.Ж) {
   display: none;
 }
+
 #Ж:checked~ul label[for="Ж"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -759,6 +766,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #З:checked~#list li:not(.З) {
   display: none;
 }
+
 #З:checked~ul label[for="З"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -767,6 +775,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #І:checked~#list li:not(.І) {
   display: none;
 }
+
 #І:checked~ul label[for="І"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -775,6 +784,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ї:checked~#list li:not(.Ї) {
   display: none;
 }
+
 #Ї:checked~ul label[for="Ї"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -783,6 +793,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Й:checked~#list li:not(.Й) {
   display: none;
 }
+
 #Й:checked~ul label[for="Й"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -791,6 +802,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #К:checked~#list li:not(.К) {
   display: none;
 }
+
 #К:checked~ul label[for="К"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -799,6 +811,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Л:checked~#list li:not(.Л) {
   display: none;
 }
+
 #Л:checked~ul label[for="Л"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -807,6 +820,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #М:checked~#list li:not(.М) {
   display: none;
 }
+
 #М:checked~ul label[for="М"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -815,6 +829,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Н:checked~#list li:not(.Н) {
   display: none;
 }
+
 #Н:checked~ul label[for="Н"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -823,6 +838,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #О:checked~#list li:not(.О) {
   display: none;
 }
+
 #О:checked~ul label[for="О"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -831,6 +847,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #П:checked~#list li:not(.П) {
   display: none;
 }
+
 #П:checked~ul label[for="П"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -839,6 +856,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Р:checked~#list li:not(.Р) {
   display: none;
 }
+
 #Р:checked~ul label[for="Р"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -847,6 +865,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #С:checked~#list li:not(.С) {
   display: none;
 }
+
 #С:checked~ul label[for="С"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -855,6 +874,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Т:checked~#list li:not(.Т) {
   display: none;
 }
+
 #Т:checked~ul label[for="Т"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -863,6 +883,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #У:checked~#list li:not(.У) {
   display: none;
 }
+
 #У:checked~ul label[for="У"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -871,6 +892,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ф:checked~#list li:not(.Ф) {
   display: none;
 }
+
 #Ф:checked~ul label[for="Ф"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -879,6 +901,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Х:checked~#list li:not(.Х) {
   display: none;
 }
+
 #Х:checked~ul label[for="Х"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -887,6 +910,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ц:checked~#list li:not(.Ц) {
   display: none;
 }
+
 #Ц:checked~ul label[for="Ц"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -895,6 +919,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ч:checked~#list li:not(.Ч) {
   display: none;
 }
+
 #Ч:checked~ul label[for="Ч"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -903,6 +928,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ш:checked~#list li:not(.Ш) {
   display: none;
 }
+
 #Ш:checked~ul label[for="Ш"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -911,6 +937,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Щ:checked~#list li:not(.Щ) {
   display: none;
 }
+
 #Щ:checked~ul label[for="Щ"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -919,6 +946,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Ю:checked~#list li:not(.Ю) {
   display: none;
 }
+
 #Ю:checked~ul label[for="Ю"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -927,6 +955,7 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
 #Я:checked~#list li:not(.Я) {
   display: none;
 }
+
 #Я:checked~ul label[for="Я"] {
   background-color: rgba(156, 163, 175);
   color: #f5f5f5;
@@ -968,6 +997,33 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
   display: block;
 } */
 
+/* dictionaries */
+
+
+#dictionaries>ul:nth-of-type(1) {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#dictionaries>ul:nth-of-type(1) hr {
+  width: 100%;
+}
+
+/* #dictionaries>ul:nth-of-type(1) span, */
+.letters {
+  display: inline-block;
+  padding: 3px 10px;
+  cursor: pointer;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+#dictionaries>ul:nth-of-type(1) span:hover {
+  background-color: #f5f5f5;
+}
 
 .dropdown-item {
   display: block;
@@ -983,10 +1039,23 @@ a#teleglossary>ul:nth-of-type(1) label:hover {
   line-height: normal;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
+.dropdown-item:focus,
+.dropdown-item:hover {
   color: #16181b;
   text-decoration: none;
   background-color: #f8f9fa;
+}
+
+#dictionaries ul:nth-of-type(2) {
+  padding: 0;
+  overflow: auto;
+  max-height: 240px;
+  text-align: right;
+}
+
+.active {
+  background-color: rgba(156, 163, 175);
+  color: #f5f5f5;
 }
 
 
