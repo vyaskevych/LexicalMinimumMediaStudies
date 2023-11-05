@@ -1009,16 +1009,19 @@ a[data-toggle="collapse"] {
 
 #dictionaries>ul:nth-of-type(1) hr {
   width: 100%;
+  margin-top: 3px;
+  margin-bottom: 6px;
 }
 
 /* #dictionaries>ul:nth-of-type(1) span, */
 .letters {
   display: inline-block;
-  padding: 3px 10px;
+  padding: 3px 6px;
   cursor: pointer;
   color: #555;
   margin-bottom: 5px;
   font-weight: 700;
+  font-size: 12px;
 }
 
 #dictionaries>ul:nth-of-type(1) span:hover {
