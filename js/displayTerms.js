@@ -16,12 +16,16 @@ firebase.analytics();
 
 let leftlist = document.getElementById('leftlist');
 let otherDescription = document.getElementById('otherDescription');
+let about = document.querySelector('#about div');
 let termins = [];
 
 
 function getData(event, type = 'LexicalMin') {
     var dbRef = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/${type}`);
     dbRef.on('value', snap => { render(snap.val()); renderTermin(0) });
+    const dbAbout = firebase.database().ref(`1YQG7H2FTltWuQoEl_wXnhCHF0LCShGUrhpbtEtgF-qc/about`);
+    dbAbout.on('value', snap => { about.innerHTML = snap.val(); console.log('qwery', snap.val()) });
+
 }
 
 function render(data) {
@@ -249,7 +253,7 @@ function getFirstLetter(letter) {
 
 
 /**
- * Створення словника медійнрих термінів
+ * Створення словника медійних термінів
  */
 
 document.querySelector('[data-target="#dictionaries"]').addEventListener('click', getDictionaries);
@@ -285,3 +289,9 @@ function filterDictionaries(event) {
     filteredData = data.filter(item => item.termin.trim()[0].toUpperCase() === letter);
     renderDictionaries(filteredData, targetList);
 }
+
+
+
+/**
+ * 
+ */
