@@ -149,11 +149,11 @@ function renderMediateka() {
   
         return `
           <div class="mb-3">
-            <h3>
+            <p class="letters">
               <a class="text-decoration-none" data-toggle="collapse" data-target="#${categoryId}">
                 ${category.name}
               </a>
-            </h3>
+            </p>
             <div id="${categoryId}" class="collapse">
               <ul class="list-group">
                 ${category.subcategories
