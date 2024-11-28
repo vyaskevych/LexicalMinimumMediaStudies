@@ -135,7 +135,7 @@ export const categories = [
           { "title": "РЕКЛАМА «АСТУДІЯ»", "link": "https://www.youtube.com/watch?v=RglkSSZml5E" },
           { "title": "УНІВЕРСИТЕТУ З ЛЮБОВ&#39;Ю... ВІД ЖУРНАЛІСТІВ", "link": "https://www.youtube.com/watch?v=Nr5jlNZkpS0&amp;t=23s" }
         ]
-      },  
+      },
       {
         "name": "телегра",
         "description": `«різновид телевізійних шоу, головним елементом сюжету якого є змагання
@@ -150,7 +150,7 @@ export const categories = [
         "projects": [
           { "title": "ПОМІЧНИКИ", "link": "https://www.youtube.com/watch?v=kG2CRy-SnDs&amp;list=PLXpm9hSPU9RObzmsKS-jLMpP2Dvow_O1B" },
           { "title": "УКРАЇНОГРАЙ В ГОСТЯХ У ПАНА САВКИ", "link": "https://www.youtube.com/watch?v=oaZRMTb4xnc&amp;t=15s" }]
-      },  
+      },
       {
         "name": "ток-шоу",
         "description": `«різновид телепередачі, телевізійної дискусії, полілог, обговорення питань загального
@@ -158,13 +158,13 @@ export const categories = [
 особистий досвід в означеній темі та глядачі в студії. Спілкування організує один або кілька
 телеведучих»`,
         "projects": [{ "title": "НАУКОВА ДІЯЛЬНІСТЬ: ВИРОК ЧИ ПАНАЦЕЯ", "link": "https://www.youtube.com/watch?v=V_FFQPUCvr0" }]
-      }, 
+      },
       {
         "name": "фотофільм",
         "description": `«фільм, який складається з нерухомих кадрів-фотографій з використанням музичного
 супроводу; розповідає історію чи розкриває певну соціально значущу тему»`,
         "projects": [{ "title": "ІНШЕ ЖИТТЯ. ВІЙНА", "link": "https://www.youtube.com/watch?v=28CVtfFSxtY" }]
-      }, 
+      },
     ]
   },
   {
@@ -337,8 +337,21 @@ export const categories = [
     "subcategories": [
       {
         "name": "тематичні фото",
-        "description": "",
-        "projects": []
+        "description": ``,
+        "projects": [
+          {
+            "title": "Брюсельський Гран-Плас очима українки",
+            "link": "https://fj.kubg.edu.ua/struktura/kafedry/kafedra-zhurnalistyky-ta-novykh-media/proiekty-zdobuvachiv-vyshchoi-osvity-jnm/fotoproiekty.html#fotoproiekt-briusselskyi-hran-plas-ochyma-ukrainky"
+          },
+          {
+            "title": `"Світ навколо нас або другий рік війни" Фотовиставка студентів Факультету журналістики`,
+            "link": "https://fj.kubg.edu.ua/struktura/kafedry/kafedra-zhurnalistyky-ta-novykh-media/proiekty-zdobuvachiv-vyshchoi-osvity-jnm/fotoproiekty.html#fotovystavka-studentiv-fakultetu-zhurnalistyky-svit-navkolo-nas-abo-druhyy-rik-viyny",
+          },
+          {
+            "title": `"100 хронік війни або Війна у моєму вікні"`,
+            "link": "https://fj.kubg.edu.ua/struktura/kafedry/kafedra-zhurnalistyky-ta-novykh-media/proiekty-zdobuvachiv-vyshchoi-osvity-jnm/fotoproiekty.html#100-khronik-viiny-abo-fotovystavka-viina-u-moiemu-vikni",
+          }
+        ]
       },
       {
         "name": "фотодокументи",
